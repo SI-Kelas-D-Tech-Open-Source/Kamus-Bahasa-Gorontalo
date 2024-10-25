@@ -8,3 +8,12 @@ export const getLeanguage = async () => {
         console.log(error)
     }
 }
+
+export const getCategory = async () => {
+    try {
+        const categories = await prisma.category.findMany()
+        return categories
+    } catch (error) {
+        console.log(error)
+    }
+}
