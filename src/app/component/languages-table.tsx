@@ -24,18 +24,18 @@ const LanguagesTable = async () => {
         <tbody>
             {language.map((language) => (
                 <tr key={language.indonesia}>
-                <td className="py-2 px-2">{language.indonesia}</td>
-                <td className="py-2 px-2">{language.gorontalo}</td>
-                <td className="py-2 px-2">{language.category?.name || 'Kategori tidak ditemukan'}</td>
-                <td className="py-2 px-2">{language.image}</td>
-                <td className="py-2 px-2">{language.sound}</td>
-                <td className="py-2 px-2">{dateFormat(language.created_at.toString())}</td>
-                <td className="py-2 px-2">{dateFormat(language.updated_at.toString())}</td>
-                <td className="flex items-center justify-center gap-1 py-2 px-2">
-                    <UpdateButton />
-                    <DeleteButton />
-                </td>
-            </tr>
+                    <td className="py-2 px-2">{language.indonesia}</td>
+                    <td className="py-2 px-2">{language.gorontalo}</td>
+                    <td className="py-2 px-2">{language.categoryId || "Kategori tidak ditemukan"}</td>
+                    <td className="py-2 px-2">{language.image}</td>
+                    <td className="py-2 px-2">{language.sound}</td>
+                    <td className="py-2 px-2">{dateFormat(language.created_at.toString())}</td>
+                    <td className="py-2 px-2">{dateFormat(language.updated_at.toString())}</td>
+                    <td className="flex items-center justify-center gap-1 py-2 px-2">
+                        <UpdateButton />
+                        <DeleteButton />
+                    </td>
+                </tr>
             ))}
             
         </tbody>
